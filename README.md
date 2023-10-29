@@ -6,7 +6,6 @@ from text_translator import TextTranslator
 
 translator = TextTranslator()
 
-# 创建包含葡萄牙语句子的 DataFrame
 portuguese_samples = [
     "Como vai você?",
     "Eu gosto de viajar para Portugal.",
