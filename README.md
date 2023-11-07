@@ -46,3 +46,47 @@ print(df)
 print(translator.detect_language("Como vai você?"))
 
 ```
+
+
+## 翻译效果
+```python
+# 正常语句，翻译效果还可以
+
+portuguese_samples = [
+    "a verdadeira vida é assim. sem maquiagem",
+    "esses vídeos deveriam ser proibido na plataforma",
+    "a polícia demora muito a chegar me dar nervoso....ainda bem que salvaram ela"
+]
+data = {'Portuguese Sentences': portuguese_samples}
+df = pd.DataFrame(data)
+
+df['translated_result'] = translator.batch_translate(df['Portuguese Sentences'])
+
+print(df)
+```
+
+
+```python
+# 存在语法和拼写错误时，翻译效果不理想
+
+"""
+我只需要肉，因为调味料已经准备好了。
+愿神保佑工作大家庭的工作，奉我们主耶稣基督的名，阿门
+太好了，这就是生活！我现在要解决我的问题。
+"""
+
+portuguese_samples = [
+    "só faltou a carne porque o tempeiro tá completo",
+    "Só faltou a carne porque o tempero está completo.",
+    "Deus abençoe o trabalho à família do trabalho em nome do nosso senhor Jesus Cristo amém",
+    "Deus abençoe o trabalho e a família do trabalho em nome do nosso Senhor Jesus Cristo. Amém.",
+    "top aí sim é vida já vou resolver meu problema",
+    "Top, aí sim é vida. Já vou resolver meu problema."
+]
+data = {'Portuguese Sentences': portuguese_samples}
+df = pd.DataFrame(data)
+
+df['translated_result'] = translator.batch_translate(df['Portuguese Sentences'])
+
+print(df)
+```
