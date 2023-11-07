@@ -47,6 +47,9 @@ print(translator.detect_language("Como vai você?"))
 
 ```
 
+<img width="701" alt="image" src="https://github.com/guangxuqi/text-translator/assets/57093343/43346a55-524f-41f2-ac96-864d21722de6">
+
+
 
 ## 翻译效果
 ```python
@@ -64,6 +67,7 @@ df['translated_result'] = translator.batch_translate(df['Portuguese Sentences'])
 
 print(df)
 ```
+<img width="714" alt="image" src="https://github.com/guangxuqi/text-translator/assets/57093343/edc7458b-efe7-4014-ba99-766170f31d2b">
 
 
 ```python
@@ -90,3 +94,4 @@ df['translated_result'] = translator.batch_translate(df['Portuguese Sentences'])
 
 print(df)
 ```
+<img width="720" alt="image" src="https://github.com/guangxuqi/text-translator/assets/57093343/67bcbcb1-d8f6-41b9-a1b5-9fe58e9756c1">
